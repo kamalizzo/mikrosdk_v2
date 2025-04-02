@@ -1,0 +1,31 @@
+
+<p align="center">
+  <img src="http://www.mikroe.com/img/designs/beta/logo_small.png?raw=true" alt="MikroElektronika"/>
+</p>
+
+---
+
+**[BACK TO PREVIOUS FILE](../changelog.md)**
+
+---
+
+# `DATE`
+
+## Changes
+
+- [`DATE`](#date)
+  - [Changes](#changes)
+    + [Improvements](#improvements)
+
+### Improvements
+
+Preconfigured Clock settings addeded for following hardware:
+
++ [Freedom Development Platform for Kinetis K66, K65, and K26 MCUs](https://www.nxp.com/design/design-center/development-boards-and-designs/general-purpose-mcus/freedom-development-platform-for-kinetis-k66-k65-and-k26-mcus:FRDM-K66F)
+  + 180 MHz Clock using internal oscillator
+
+---
+
+**[BACK TO PREVIOUS FILE](../changelog.md)**
+
+---
