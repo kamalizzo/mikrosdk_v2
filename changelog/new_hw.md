@@ -19,7 +19,7 @@
 
 ### Improvements
 
-Preconfigured Clock settings addeded for following hardware:
+Preconfigured Clock settings added for following hardware:
 
 + [PIC24H Capacitive Touch Evaluation Board](https://mplab-discover.microchip.com/v2/item/com.microchip.portal.evalboard/com.microchip.subcategories.modules-and-peripherals.communication.can.Others/mcu08.ac243026/1.0.0?view=about)
   + 25 MHz Clock using internal oscillator
