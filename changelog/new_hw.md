@@ -19,7 +19,7 @@
 
 ### Improvements
 
-Preconfigured Clock settings addeded for following hardware:
+Preconfigured Clock settings added for following hardware:
 
 + [PICDEM LCD 2 DEMONSTRATION BOARD](https://www.microchip.com/en-us/development-tool/DM163030)
   + 64 MHz Clock using internal oscillator
