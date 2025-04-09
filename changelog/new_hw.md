@@ -19,7 +19,7 @@
 
 ### Improvements
 
-Preconfigured Clock settings addeded for following hardware:
+Preconfigured Clock settings added for following hardware:
 
 + [Nucleo 32 with STM32F031K6 MCU](https://www.st.com/content/st_com/en/products/evaluation-tools/product-evaluation-tools/mcu-mpu-eval-tools/stm32-mcu-mpu-eval-tools/stm32-nucleo-boards/nucleo-f031k6.html)
   + 48 MHz Clock using internal oscillator
