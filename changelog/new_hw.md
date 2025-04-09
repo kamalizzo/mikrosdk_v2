@@ -19,7 +19,7 @@
 
 ### Improvements
 
-Preconfigured Clock settings addeded for following hardware:
+Preconfigured Clock settings added for following hardware:
 
 + [PIM for PIC24HJ128GP504](https://www.microchipdirect.com/dev-tools/MA240016?srsltid=AfmBOor2juEv7VW5H1cMzbyk-WC6YF8Sdy2AzpkeqP2XjObY__MYFK_P&allDevTools=true)
   + 25 MHz Clock using internal oscillator
