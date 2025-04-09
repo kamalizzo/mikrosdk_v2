@@ -19,7 +19,7 @@
 
 ### Improvements
 
-Preconfigured Clock settings addeded for following hardware:
+Preconfigured Clock settings added for following hardware:
 
 + [PIC18F67J94 Development Board](https://mplab-discover.microchip.com/v2/item/com.microchip.portal.evalboard/com.microchip.subcategories.modules-and-peripherals.communication.spi/mcu08.dm183037/1.0.0?view=about)
   + 64 MHz Clock using internal oscillator
