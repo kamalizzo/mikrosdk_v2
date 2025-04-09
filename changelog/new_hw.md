@@ -19,7 +19,7 @@
 
 ### Improvements
 
-Preconfigured Clock settings addeded for following hardware:
+Preconfigured Clock settings added for following hardware:
 
 + [LED LIGHT CUBE](https://www.microchip.com/en-us/development-tool/AC100200)
   + 8 MHz Clock using internal oscillator
