@@ -19,7 +19,7 @@
 
 ### Improvements
 
-Preconfigured Clock settings addeded for following hardware:
+Preconfigured Clock settings added for following hardware:
 
 + [Arduino Nano](https://store.arduino.cc/products/arduino-nano?_gl=1*1ilbb7v*_up*MQ..*_ga*Mzc2OTY2MTYzLjE3MzUwNTAzMjc.*_ga_NEXN8H46L5*MTczNTA1MDMyNS4xLjAuMTczNTA1MDMyNS4wLjAuODA5MDc4MjMy)
   + 8 MHz Clock using internal oscillator
