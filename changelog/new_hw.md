@@ -19,7 +19,7 @@
 
 ### Improvements
 
-Preconfigured Clock settings addeded for following hardware:
+Preconfigured Clock settings added for following hardware:
 
 + [MPLab Starter Kit For PIC24H MCUs](https://mplab-discover.microchip.com/v2/item/com.microchip.portal.evalboard/com.microchip.subcategories.modules-and-peripherals.communication.usb/mcu08.dm240021/1.0.0?view=about)
   + 25 MHz Clock using internal oscillator
