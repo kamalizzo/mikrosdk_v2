@@ -19,7 +19,7 @@
 
 ### Improvements
 
-Preconfigured Clock settings addeded for following hardware:
+Preconfigured Clock settings added for following hardware:
 
 + [PIC-IOT WA DEVELOPMENT BOARD](https://www.microchip.com/en-us/development-tool/EV54Y39A)
   + 4 MHz Clock using internal oscillator
