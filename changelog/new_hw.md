@@ -19,7 +19,7 @@
 
 ### Improvements
 
-Preconfigured Clock settings addeded for following hardware:
+Preconfigured Clock settings added for following hardware:
 
 + [ATMEGA328P XPLAINED MINI](https://mplab-discover.microchip.com/v2/item/com.microchip.portal.evalboard/com.microchip.subcategories.tools.debugging-icd/mcu08.atmega328p-xmini/1.0.0?view=about)
   + 8 MHz Clock using internal oscillator
