@@ -19,7 +19,7 @@
 
 ### Improvements
 
-Preconfigured Clock settings addeded for following hardware:
+Preconfigured Clock settings added for following hardware:
 
 + [PIM for PIC24HJ256GP610A](https://www.microchipdirect.com/dev-tools/MA240012?srsltid=AfmBOoqPx5RGBBIyznQEsdqrkvZzC8t80-rFEpEdM2JKlF9FZZnDuMBC&allDevTools=true)
   + 25 MHz Clock using internal oscillator
