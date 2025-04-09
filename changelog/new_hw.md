@@ -19,7 +19,7 @@
 
 ### Improvements
 
-Preconfigured Clock settings addeded for following hardware:
+Preconfigured Clock settings added for following hardware:
 
 + [PIC32 CAPACITIVE TOUCH EVALUATION BOARD](https://www.microchip.com/en-us/development-tool/AC323026)
   + 8 MHz Clock using internal oscillator
