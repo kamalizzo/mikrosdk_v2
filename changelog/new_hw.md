@@ -19,7 +19,7 @@
 
 ### Improvements
 
-Preconfigured Clock settings addeded for following hardware:
+Preconfigured Clock settings added for following hardware:
 
 + [PIC18 POE Main Board](https://mplab-discover.microchip.com/v2/item/com.microchip.portal.evalboard/com.microchip.subcategories.tools.development-boards/mcu08.dm160230/1.0.0?view=about)
   + 64 MHz Clock using internal oscillator
