@@ -19,7 +19,7 @@
 
 ### Improvements
 
-Preconfigured Clock settings addeded for following hardware:
+Preconfigured Clock settings added for following hardware:
 
 + [PIC32MZ EF Starter Kit with PIC32MZ2048EFM144](https://mplab-discover.microchip.com/v2/item/com.microchip.portal.evalboard/com.microchip.subcategories.modules-and-peripherals.communication.can.Others/mcu32.dm320007/1.0.0?view=about)
   + 200 MHz Clock using internal oscillator
