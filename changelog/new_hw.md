@@ -19,7 +19,7 @@
 
 ### Improvements
 
-Preconfigured Clock settings addeded for following hardware:
+Preconfigured Clock settings added for following hardware:
 
 + [MPLab Starter Kit For PIC18F MCUs](https://mplab-discover.microchip.com/v2/item/com.microchip.portal.evalboard/com.microchip.subcategories.modules-and-peripherals.communication.can.Others/mcu08.dm180021/1.0.0?view=about)
   + 64 MHz Clock using internal oscillator
