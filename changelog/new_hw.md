@@ -19,7 +19,7 @@
 
 ### Improvements
 
-Preconfigured Clock settings addeded for following hardware:
+Preconfigured Clock settings added for following hardware:
 
 + [PICDEM FS USB Demo Board](https://mplab-discover.microchip.com/v2/item/com.microchip.portal.evalboard/com.microchip.subcategories.modules-and-peripherals.communication.usb/mcu08.dm163025-1/1.0.0?view=about)
   + 64 MHz Clock using internal oscillator
