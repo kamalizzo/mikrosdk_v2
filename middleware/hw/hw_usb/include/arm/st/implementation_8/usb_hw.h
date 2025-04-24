@@ -1,6 +1,6 @@
 /****************************************************************************
 **
-** Copyright (C) ${COPYRIGHT_YEAR} MikroElektronika d.o.o.
+** Copyright (C) 2025 MikroElektronika d.o.o.
 ** Contact: https://www.mikroe.com/contact
 **
 ** This file is part of the mikroSDK package
@@ -55,15 +55,6 @@ extern "C"{
 // MikroE interrupt source uses NVIC -> (IRQx + 16).
 #define NVIC_EnableIRQ(_x)  interrupt_enable(_x + 16)
 #define NVIC_DisableIRQ(_x) interrupt_disable(_x + 16)
-#define power_set()         ( USB_OTG_FS->GCCFG |= USB_OTG_GCCFG_PWRDWN )
-#ifdef USB_OTG_GCCFG_VBUSASEN
-#define vbus_enable()       ( USB_OTG_FS->GCCFG |= USB_OTG_GCCFG_VBUSASEN )
-#else
-#define vbus_enable()       ( USB_OTG_FS->GCCFG |= USB_OTG_GCCFG_VBDEN )
-#endif
-
-#define GPIOA_AFRH_PIN11_AF14 (0x0000E000)
-#define GPIOA_AFRH_PIN12_AF14 (0x000E0000)
 
 /*!
  * @addtogroup middleware Middleware
@@ -79,6 +70,9 @@ extern "C"{
  * @{
  */
 
+// Clock value in Hz provided externally.
+extern volatile uint32_t SystemCoreClock;
+
 /**
  * @brief Initializes USB.
  * @details Sets appropriate clock settings.
@@ -87,30 +81,33 @@ extern "C"{
  * @return None
  */
 static inline void usb_hw_init(void) {
-    // Enable clock for PORT A.
-    RCC->APB1ENR |= RCC_APB1ENR_PWREN;
-    RCC->AHBENR |= RCC_AHBENR_GPIOAEN;
+    // Enable clock for GPIO_PORT_A.
+    RCC->AHB2ENR |= RCC_AHB2ENR_GPIOAEN;
+    RCC->AHB2ENR |= RCC_AHB2ENR_GPIOBEN;
+    RCC->AHB2ENR |= RCC_AHB2ENR_GPIOCEN;
+    RCC->AHB2ENR |= RCC_AHB2ENR_GPIODEN;
+    RCC->AHB2ENR |= RCC_AHB2ENR_GPIOEEN;
+    RCC->AHB2ENR |= RCC_AHB2ENR_GPIOFEN;
 
-    // Alternate function enable for pins GPIO_PA12 and GPIO_PA11.
-    GPIOA->MODER |= GPIO_MODER_MODER11_1;
-    GPIOA->MODER |= GPIO_MODER_MODER12_1;
-    // Pins speed selection.
-    GPIOA->OSPEEDR |= GPIO_OSPEEDER_OSPEEDR11_0;
-    GPIOA->OSPEEDR |= GPIO_OSPEEDER_OSPEEDR11_1;
-    GPIOA->OSPEEDR |= GPIO_OSPEEDER_OSPEEDR12_0;
-    GPIOA->OSPEEDR |= GPIO_OSPEEDER_OSPEEDR12_1;
-    // Setting alternate function AF10 for pins A11, A12.
-    GPIOA->AFR[1] |= GPIOA_AFRH_PIN11_AF14;
-    GPIOA->AFR[1] |= GPIOA_AFRH_PIN12_AF14;
+    // SysTick_Config(SystemCoreClock / 1000);
 
-    // Check if the division factor for PLL -> USB clock is set correctly.
-    if ( ( RCC->CFGR & RCC_CFGR_PLLMUL) == RCC_CFGR_PLLMUL12 )
-        RCC->CFGR |= RCC_CFGR_USBPRE_DIV1;
+    RCC->CCIPR &= ~RCC_CCIPR_CLK48SEL;
+    // USB Clock enable.
+    RCC->APB1ENR1 |= RCC_APB1ENR1_USBEN;
 
-    // USB_OTG_FS Clock enable.
-    RCC->APB1ENR |= RCC_APB1ENR_USBEN;
-    // System Clock Configuration Clock enable.
-    RCC->APB2ENR |= RCC_APB2ENR_SYSCFGEN;
+    // Set PA11 and PA12 to input mode (00)
+    GPIOA->MODER &= ~((3U << (11 * 2)) | (3U << (12 * 2)));  // Clear bits
+
+    // Set PA11 and PA12 to pull-down (10)
+    GPIOA->PUPDR &= ~((3U << (11 * 2)) | (3U << (12 * 2)));      // Clear
+    GPIOA->PUPDR |=  ((2U << (11 * 2)) | (2U << (12 * 2)));      // Set to 10 (pull-down)
+
+    // Speed register: set high speed (11)
+    GPIOA->OSPEEDR |= ((3U << (11 * 2)) | (3U << (12 * 2)));
+
+    RCC->APB1ENR1 |= RCC_APB1ENR1_PWREN;
+    RCC->AHB1ENR |= RCC_AHB1ENR_CRCEN;
+    RCC->APB1ENR2 |= RCC_APB1ENR2_UCPD1EN;
 }
 
 /*! @} */ // usb
