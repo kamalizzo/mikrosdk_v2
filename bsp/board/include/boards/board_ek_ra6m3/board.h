@@ -51,15 +51,8 @@ extern "C"
 
 #define BOARD_NAME "Evaluation Kit for RA6M3 MCU Group"
 
-#include "mikrobus.h"
-
 // Mapping
-#define HEADER_CONNECTOR_J1_D1        // Pin not routed
-#define HEADER_CONNECTOR_J1_D2        // Pin not routed
-#define HEADER_CONNECTOR_J1_D3        // Pin not routed
-#define HEADER_CONNECTOR_J1_D4        GPIO_PB7
-#define HEADER_CONNECTOR_J1_D5        GPIO_PB6
-#define HEADER_CONNECTOR_J1_D6        // Pin not routed
+// Only Bare Metal support is available for this board at the moment
 
 #ifdef __cplusplus
 }
