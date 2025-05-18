@@ -5,7 +5,7 @@
     "description": "",
     "repository": {
         "type": "git",
-        "url": "https://github.com/noidea/noidea.git"
+        "url": "https://github.com/kamalizzo/mikrosdk_v2.git"
     },
     "frameworks": "arduino",
     "platforms": "espressif32",
